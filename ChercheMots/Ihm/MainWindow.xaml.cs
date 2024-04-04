@@ -53,5 +53,12 @@ namespace ChercheMots
             Ihm.DefinitionsWindow win = new Ihm.DefinitionsWindow(dico);
             win.Show();
         }
+
+        private void Valeur(object sender, RoutedEventArgs e)
+        {
+            // ouvre la fenêtre valeur
+            Ihm.ValeurWindow win = new Ihm.ValeurWindow(dico);
+            win.Show();
+        }
     }
 }

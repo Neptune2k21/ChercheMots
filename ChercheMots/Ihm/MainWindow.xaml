@@ -11,5 +11,6 @@
         
         <Button Content="Anagrammes" Margin="10" Click="Anagrammes"  />
         <Button Content="Définitions" Margin="10" Click="Definitions" />
+        <Button Content="Valeur du mot" Margin="10" Click="Valeur" />
     </StackPanel>
 </Window>
