@@ -1,33 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-/// <author> HUGEROT Ethan </author>
 namespace ChercheMots.Ihm
 {
     /// <summary>
     /// Logique d'interaction pour ValeurWindow.xaml
+    /// <author> HUGEROT Ethan </author>
     /// </summary>
     public partial class ValeurWindow : Window
     {
+        private Metier.Dictionnaire dico;
+
         public ValeurWindow(Metier.Dictionnaire dico)
         {
             InitializeComponent();
+            this.dico = dico;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string mot = textBoxMot.Text.ToUpper();
+            try
+            {
+                int valeur = Metier.Dictionnaire.CalculerValeurMot(mot);
+                AfficherResultat(valeur);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void AfficherResultat(int valeur)
+        {
+            textBoxResultat.Text = valeur.ToString();
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)

@@ -6,13 +6,12 @@
         xmlns:local="clr-namespace:ChercheMots.Ihm"
         mc:Ignorable="d"
         Title="ValeurWindow" Height="400" Width="300">
-    <!-- <author> HUGEROT Ethan </author> -->
+        <!-- HUGEROT ethan -->
     <Grid>
         <Label Content="Saisir un mot :" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.46,0.491" Height="30" Width="104" FontSize="15"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="244" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="textBoxMot" HorizontalAlignment="Center" Margin="0,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" TextChanged="TextBox_TextChanged_1"/>
         <Button Content="Calculer" FontSize="15" HorizontalAlignment="Center" Height="44" Margin="0,146,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click"/>
         <Label Content="Valeur du mot :" FontSize="15" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="110" Margin="0,224,0,0"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,281,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="54" TextChanged="TextBox_TextChanged"/>
-
+        <TextBox x:Name="textBoxResultat" HorizontalAlignment="Center" Margin="0,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" TextChanged="TextBox_TextChanged"/>
     </Grid>
 </Window>
