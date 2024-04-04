@@ -54,11 +54,21 @@ namespace ChercheMots
             win.Show();
         }
 
+        // <author> HUGEROT Ethan </author>
         private void Valeur(object sender, RoutedEventArgs e)
         {
             // ouvre la fenêtre valeur
             Ihm.ValeurWindow win = new Ihm.ValeurWindow(dico);
             win.Show();
         }
+
+        // <author> HUGEROT Ethan</author>
+        private void Palindromes(object sender, RoutedEventArgs e)
+        {
+            // ouvre la fenêtre palindromes
+            Ihm.PalindromesWindow win = new Ihm.PalindromesWindow(dico);
+            win.Show();
+        }
+
     }
 }

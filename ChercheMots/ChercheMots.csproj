@@ -81,12 +81,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ihm\PalindromesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ihm\ValeurWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ihm\PalindromesWindow.xaml.cs">
+      <DependentUpon>PalindromesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ihm\ValeurWindow.xaml.cs">
       <DependentUpon>ValeurWindow.xaml</DependentUpon>
     </Compile>

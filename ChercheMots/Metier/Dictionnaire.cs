@@ -143,6 +143,51 @@ namespace ChercheMots.Metier
             return valeur;
         }
 
+        /// <summary>
+        /// Vérifie si un mot est un palindrome.
+        /// </summary>
+        /// <author> HUGEROT Ethan </author>
+        /// <param name="mot">Le mot à vérifier.</param>
+        /// <returns>True si le mot est un palindrome, sinon False.</returns>
+        public static bool EstPalindrome(string mot)
+        {
+            int debut = 0;
+            int fin = mot.Length - 1;
+
+            while (fin > debut)
+            {
+                if (mot[debut] != mot[fin])
+                {
+                    return false;
+                }
+                debut++;
+                fin--;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Récupère la liste des palindromes présents dans le dictionnaire.
+        /// </summary>
+        /// <author> HUGEROT Ethan </author>
+        /// <returns>La liste des palindromes.</returns>
+        public List<string> Palindromes()
+        {
+            List<string> palindromes = new List<string>();
+
+            foreach (string mot in mots.Keys)
+            {
+                if (EstPalindrome(mot))
+                {
+                    palindromes.Add(mot);
+                }
+            }
+
+            return palindromes;
+        }
+
+
 
         /// <summary>
         /// Fournit les anagrammes d'un mot, issus du dictionnaire
